@@ -63,14 +63,20 @@ def hieu(path):
     print(response.json())
     return response.json()['hypotheses'][0]['utterance']
 def xuli(text_khach):
-    url='http://0.0.0.0:9999/getreponse'
-    dataload={
-    "msg": text_khach
-    }
+    # url='http://0.0.0.0:9999/getreponse'
+    # dataload={
+    # "msg": text_khach
+    # }
     
-    intent=requests.post(url=url,json=dataload)
-    print(intent.json()['intent'])
-    return intent.json()['intent']
+    # intent=requests.post(url=url,json=dataload)
+    # print(intent.json()['intent'])
+    # return intent.json()['intent']
+    if "Alo" in text_khach:
+        return 'Xin chào quý khách, khách quan tâm sản phầm gì ạ'
+    elif "mang" in text_khach:
+        return 'Khách mang size này là vừa đẹp ạ'
+    else:
+        return "XIn quý khách nhắc lại yêu cầu ạ"
 def noi(text_bot):
     url = 'https://api.fpt.ai/hmi/tts/v5'
 
