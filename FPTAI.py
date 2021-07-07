@@ -13,28 +13,7 @@ import pyaudio
 import wave
 
 def nghe():  
-    # # Sampling frequency
-    # freq = 44100
     
-    # # Recording duration
-    # duration = 5
-    
-    # # Start recorder with the given values 
-    # # of duration and sample frequency
-    # recording = sd.rec(int(duration * freq), 
-    #                 samplerate=freq, channels=2)
-    
-    # # Record audio for the given number of seconds
-    # sd.wait()
-    
-    # # This will convert the NumPy array to an audio
-    # # file with the given sampling frequency
-    # write("recording0.wav", freq, recording)
-    
-    # # Convert the NumPy array to audio file
-    # wv.write("recording1.wav", recording, freq, sampwidth=2)
-    # path="recording1.wav"
-    # return 
     CHUNK = 1024
     FORMAT = pyaudio.paInt16
     CHANNELS = 2
@@ -106,12 +85,7 @@ def noi(text_bot):
 
     print(response.text)
     print(response.json()['async'])
-    # p = vlc.MediaPlayer(response.json()['async'])
-    # p.play()
-    # song = AudioSegment.from_mp3(response.json()['async'])
-    # print('playing sound using  pydub')
-    # play(song)
-    # Set the mp3 filename
+    
     filename = "say.mp3"
     # Download an mp3 file
     print("downloading mp3 file....")
